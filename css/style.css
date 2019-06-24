@@ -1,0 +1,96 @@
+
+/*Style of index.html*/
+
+/*全局规范*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#fullPage > div {
+    overflow: hidden;
+}
+
+
+/*  第一屏样式  */
+.first {
+    padding-top: 200px;
+    background: url("../img/first.png") no-repeat top;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.first .logo {
+    background: url("../img/logoyao.png") no-repeat;
+    background-size: 100% auto;
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+}
+.first .slogan {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.first .slogan h2 {
+    font-size: 100px;
+    letter-spacing: 40px;
+    opacity: 0;
+    transition: all 1.5s;
+    color: #1d1d1d;
+}
+.first .slogan p {
+    font-size: 30px;
+    margin-top: 80px;
+    font-weight: 300;
+    color: #6c6c6c;
+}
+/*利用交集选择器，添加当前变化样式*/
+.first.current h2 {
+    letter-spacing: 5px;
+    opacity: 1;
+}
+
+
+/*  第二屏样式  */
+
+/*fullPage插件给每个屏div下还自动套了一层div*/
+.second > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.second .girl {
+    width: 900px;
+    font-size: 0;
+    /*background-color: deepskyblue;*/
+}
+.second .girl img {
+    width: 300px;
+}
+.second .intro {
+    width: 700px;
+    height: 700px;
+    /*background-color: deeppink;*/
+    color: #1d1d1d;
+    padding-top: 100px;
+}
+.second .intro h2 {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+.second .intro p {
+    font-size: 22px;
+    line-height: 60px;
+    font-weight: lighter;
+}
+
+
+
+
+
