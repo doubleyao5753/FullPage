@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FullPage Case</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+
+<!--FullPage的HTML结构，按照文档使用方法来-->
+
+<!--  .fullPage>.section*5 -->
+
+<div id="fullPage">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="slogan">
+            <h2>爱你所爱 × 行你所行</h2>
+            <p>“ 静坐常思己过，闲谈莫论人非。“</p>
+        </div>
+    </div>
+    <div class="section second">
+        <div class="girl">
+            <img src="img/f-0.png" alt="">
+            <img src="img/f-1.png" alt="">
+            <img src="img/f-2.png" alt="">
+            <img src="img/f-3.png" alt="">
+            <img src="img/f-4.png" alt="">
+            <img src="img/f-5.png" alt="">
+            <img src="img/f-6.png" alt="">
+            <img src="img/f-7.png" alt="">
+            <img src="img/f-8.png" alt="">
+            <img src="img/f-9.png" alt="">
+            <img src="img/f-10.png" alt="">
+            <img src="img/f-11.png" alt="">
+        </div>
+        <div class="intro">
+            <h2>败给你的黑色幽默</h2>
+            <p>随便说说
+                其实我早已经猜透看透不想多说<br>
+                只是我怕眼泪撑不住<br>
+                不懂你的黑色幽默
+                想通却又再考倒我<br>
+                说散你想很久了吧
+                我不想拆穿你<br>
+                当作是你开的玩笑
+                想通却又再考倒我<br>
+                说散你想很久了吧
+                败给你的黑色幽默<br>
+                我的认真败给黑色幽默<br></p>
+        </div>
+    </div>
+    <div class="section">3</div>
+    <div class="section">4</div>
+    <div class="section">5</div>
+</div>
+
+<script>
+    $(function () {
+        $('#fullPage').fullpage({
+            sectionsColor: ['#f2f6f5','#f6f6f6','#73d2f3','#fff4e0','#1b7fbd'],
+            scrollingSpeed: 1000,
+            // 回调函数之一：滑动完成后交代给你的事情
+            afterLoad: function (anchorLink,index) {
+                // 先移除其他屏的current类样式
+                $(".section").removeClass('current');
+                // 再为当前的屏添加current样式
+                setTimeout(function () {
+                    $('.section').eq(index-1).addClass('current')
+                },300)
+
+            }
+
+        })
+    })
+</script>
+</body>
+</html>
