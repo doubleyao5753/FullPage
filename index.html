@@ -53,15 +53,27 @@
                 我的认真  败给黑色幽默<br></p>
         </div>
     </div>
-    <div class="section">3</div>
-    <div class="section">4</div>
+    <div class="section third">
+        <div class="info"></div>
+        <div class="picture">
+            <div class="circle"></div>
+            <img src="img/rocket.png" alt="">
+        </div>
+    </div>
+    <div class="section fourth">
+        <div class="picture">
+            <div class="search"></div>
+            <div class="result"></div>
+        </div>
+        <div class="info"></div>
+    </div>
     <div class="section">5</div>
 </div>
 
 <script>
     $(function () {
         $('#fullPage').fullpage({
-            sectionsColor: ['#f2f6f5','#f6f6f6','#73d2f3','#fff4e0','#1b7fbd'],
+            sectionsColor: ['#f2f6f5','#f6f6f6','#1b7fbd','#9d18ff','#1b7fbd'],
             scrollingSpeed: 1000,
             // 回调函数之一：滑动完成后交代给你的事情
             afterLoad: function (anchorLink,index) {

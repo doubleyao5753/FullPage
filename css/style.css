@@ -57,6 +57,8 @@
 
 /*  第二屏样式  */
 
+/* 用flex方式布局 */
+
 /*fullPage插件给每个屏div下还自动套了一层div*/
 .second > div {
     display: flex;
@@ -108,10 +110,8 @@
     /*background-color: deeppink;*/
     color: #1d1d1d;
     padding-top: 100px;
-    font-family:'hdjxingshu1a2f5234f11da7c';
 }
 .second .intro h2 {
-
     font-size: 70px;
     line-height: 70px;
     margin-bottom: 50px;
@@ -119,6 +119,7 @@
     transition: all 2s 1s ;
 }
 .second .intro p {
+    font-family:'hdjxingshu1a2f5234f11da7c';
     font-size: 26px;
     line-height: 50px;
     font-weight: lighter;
@@ -138,7 +139,77 @@
 }
 
 
+/*  第三屏样式  */
+/* 定位方式布局 */
+.third {
+    position: relative;
+}
+.third .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../img/info_3.png") no-repeat center;
+}
+.third .picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+.third .picture .circle {
+    width: 70%;
+    height: 70%;
+    background: url("../img/circle.png") no-repeat center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.third .picture img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-250%,200%);
+    transition: all 1s;
+}
+.third.current .picture img {
+    transform: translate(-50%,-50%);
+}
+.third.current .circle {
+    animation: spin 5s linear 1s infinite;
+}
+
+@keyframes spin {
+    from {transform: translate(-50%,-50%) rotate(0deg)}
+    to {transform: translate(-50%,-50%) rotate(360deg)}
+}
 
 
+/*  第四屏样式  */
+
+.fourth {
+    position: relative;
+}
+.fourth .picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+.fourth .picture .search {
+    
+}
+.fourth .info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../img/info_4.png") no-repeat center;
+}
 
 
