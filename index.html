@@ -62,18 +62,19 @@
     </div>
     <div class="section fourth">
         <div class="picture">
-            <div class="search"></div>
+            <div class="search">
+                <div class="keyword"></div>
+            </div>
             <div class="result"></div>
         </div>
         <div class="info"></div>
     </div>
-    <div class="section">5</div>
 </div>
 
 <script>
     $(function () {
         $('#fullPage').fullpage({
-            sectionsColor: ['#f2f6f5','#f6f6f6','#1b7fbd','#9d18ff','#1b7fbd'],
+            sectionsColor: ['#f2f6f5','#f6f6f6','#ff7507','#9d18ff'],
             scrollingSpeed: 1000,
             // 回调函数之一：滑动完成后交代给你的事情
             afterLoad: function (anchorLink,index) {
@@ -83,9 +84,7 @@
                 setTimeout(function () {
                     $('.section').eq(index-1).addClass('current')
                 },300)
-
             }
-
         })
     })
 </script>

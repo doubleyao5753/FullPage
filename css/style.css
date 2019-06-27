@@ -201,7 +201,31 @@
     height: 100%;
 }
 .fourth .picture .search {
-    
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 0;
+    height: 70px;
+    background: url("../img/search.png") no-repeat;
+    transition: width 1s;
+}
+.picture .search .keyword {
+    background: url("../img/key.png");
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    width: 0;
+    height: 22px;
+    transition: width 1s steps(5) 1s;
+}
+.fourth .picture .result {
+    background: url("../img/result.png");
+    width: 70%;
+    height: 0;
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    transition: height 1s 2.5s;
 }
 .fourth .info {
     position: absolute;
@@ -210,6 +234,16 @@
     width: 50%;
     height: 100%;
     background: url("../img/info_4.png") no-repeat center;
+}
+/*过渡后的样式*/
+.fourth.current .search {
+    width: 70%;
+}
+.fourth.current .keyword {
+    width: 99px;
+}
+.fourth.current .result {
+    height: 50%;
 }
 
 
